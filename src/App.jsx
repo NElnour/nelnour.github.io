@@ -11,10 +11,10 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <div className='Hero'>
+      <section className='Hero' id='home'>
         <Canvas />
         <Header />
-      </div>
+      </section>
       <Projects />
       <Resume />
       <footer>
