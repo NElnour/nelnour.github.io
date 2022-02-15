@@ -1,0 +1,11 @@
+.App {
+    text-align: center;
+    margin: 0;
+    height: 100hv;
+    width: 100hv;
+}
+
+.Hero {
+    display: flex;
+    justify-content: center;
+}
