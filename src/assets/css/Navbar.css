@@ -13,7 +13,7 @@
 }
 
 .Navbar .Navlink {
-    border: 2px solid #36e2b2;
+    border: 2px solid #e2366a3d;
     border-radius: 50%;
     width: 48px;
     height: 5%;
@@ -24,19 +24,25 @@
 }
 
 .Navbar .Navlink a {
-    color: #36e2b2;
+    color: #e2366a3d;
     font-size: 2em;
     margin: auto;
 }
 
+.Navbar .Navlink a * {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
 .Navbar .Navlink:hover,
 .Navbar .Navlink a:hover {
-    color: aquamarine;
-    border-color: aquamarine;
+    color: #e2366a;
+    transition: ease 1s;
 }
 
 .VerticalDiv {
-    background-color: #36e2b2;
+    background-color: #e2366a3d;
     width: 2px;
     height: 15%;
     height: calc(25hv - 55px);

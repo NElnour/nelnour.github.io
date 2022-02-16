@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:wght@300;400;700&display=swap');
+.Projects {
+    font-family: var(--montserrat);
+    font-size: var(--bold);
+    width: 100%;
+    height: 100vh;
+    margin-top: 95%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10%;
+}
+
+.Project {
+    background-color: rgb(211, 104, 104);
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#fade-up-right {
+    position: relative;
+    margin-left: -50%;
+}
+
+#fade-up-left {
+    position: relative;
+    margin-left: 50%;
+}
+
+.ProjectTitle {
+    color: white;
+}
+
+:root {
+    --montserrat: 'Montserrat', sans-serif;
+    --regular: 400;
+    --light: 300;
+    --bold: 700;
+}
