@@ -36,13 +36,9 @@ class NavLink extends React.Component {
     }
 
     render() {
-        return <span className='Navlink'>
-            <a href={`#${this.props.icon}` } onClick={e => {
-                e.preventDefault
-                console.log(`clicked on ${this.props.icon}`)
-            }}>{
-                    this.state.icon}
-            </a>
-        </span>
+        return <a href={`#${this.props.icon}`} className={this.props.icon === 'home' ? 'active' : ''}>{
+                this.state.icon}
+        </a>
+
     }
 }

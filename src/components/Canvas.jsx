@@ -20,14 +20,14 @@ export default class Canvas extends React.Component {
 
         scene.background = new THREE.Color(0x0a0a0a) //
         renderer.setSize(window.innerWidth, window.innerHeight)
-        document.getElementById('header').appendChild(renderer.domElement)
+        document.getElementById('canvas').appendChild(renderer.domElement)
 
         var box = new RoundedBoxGeometry(2, 2, 2, 7, 0.2);
-        var material = new THREE.MeshLambertMaterial({ color: 0xff61ad });
+        var material = new THREE.MeshLambertMaterial({ color: 0xfb8cbb});
         var cube = new THREE.Mesh(box, material);
         scene.add(cube)
 
-        var pointLight = new THREE.PointLight(0xff61ad, 1);
+        var pointLight = new THREE.PointLight(0xffffff, 1);
         pointLight.position.set(10, 10, 10)
         scene.add(pointLight)
 
@@ -52,7 +52,7 @@ export default class Canvas extends React.Component {
 
     render() {
         return (
-            <div ref={ref => this.mount = ref} className='Header' id='header' />
+            <div ref={ref => this.mount = ref} className='Canvas' id='canvas' />
         )
     }
 }

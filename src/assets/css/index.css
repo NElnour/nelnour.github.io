@@ -19,24 +19,14 @@ code {
 }
 
 :root {
+    --montserrat: 'Montserrat', sans-serif;
     --color-bg: #0a0a0a;
-    --color-bg-transparent: rgba(17, 17, 17, 0);
-    --color-text-main: #fff;
-    --color-text-navigation: hsla(0, 0%, 100%, 0.4);
-    --color-text-paragraph: hsla(0, 0%, 100%, 0.4);
-    --color-border: hsla(0, 0%, 100%, 0.1);
-    --color-blue: #248aff;
-    --color-red: #fd585b;
-    --color-yellow: #ffb01f;
-    --color-purple: #9345d3;
-    --color-purple-bright: #d65cff;
-    --color-green: #00a375;
-    --color-green-bright: #36e2b2;
-    --color-pink: #ff5cab;
-    --color-white: #fff;
-    --color-bg-pink: #ffe6e6;
-    --color-bg-greenish: #c1f6e8;
-    --color-btn-bg: hsla(0, 0%, 100%, 0.04);
-    --color-btn-bg-highlight: hsla(0, 0%, 100%, 0.06);
-    --color-panel-bg: rgba(255, 255, 255, 0.02);
+    --regular: 400;
+    --light: 300;
+    --bold: 700;
+    --accent-dim: #fb8cbaa3;
+    ;
+    /* --accent: #e2366a; */
+    --accent: #fb8cbb;
+    --secondary-accent: #B3BEFB;
 }
