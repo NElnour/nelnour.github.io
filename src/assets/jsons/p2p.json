@@ -1,0 +1,50 @@
+{
+    "nhs": {
+        "image": "/src/assets/img/projects/nhs.png",
+        "title": "NHS Properties Website",
+        "tech": ["HTML5", "CSS3", "Bootstrap"],
+        "description": "Website designed and deployed",
+        "githubUrl": "https://github.com/nhsproperties/nhsproperties.github.io",
+        "deploymentUrl": "https://nhsproperties.github.io"
+    },
+    "bcb": {
+        "image": "/src/assets/img/projects/bcb420.png",
+        "title": "BCB420 ESA R Package",
+        "tech": ["R"],
+        "description": "",
+        "githubUrl": "https://github.com/NElnour/BCB420.2019.ESA",
+        "deploymentUrl": ""
+    },
+    "fs": {
+        "image": "/src/assets/img/projects/face_splash1.png",
+        "title": "Face Splash",
+        "tech": ["Vue", "Axios", "face-api.js"],
+        "description": "Facial, sentiment, age, and sex detection analysis of Unsplash images built using Vue3,Unshplash API , and face-api.js",
+        "githubUrl": "https://github.com/NElnour/face-splash",
+        "deploymentUrl": "https://face-splash.herokuapp.com/"
+    },
+    "fortnite": {
+        "image": "/src/assets/img/projects/homepage.png",
+        "title": "fortnite 2-D MMOG",
+        "tech": ["React", "HTML5", "CSS3", "jQuery", "Ajax", "Material UI", "REST API", "Fetch API", "Node", "Express", "SQLite3", "MVC"],
+        "description": "A MMOG 2-D version of Fortnite. Class project; code withheld",
+        "githubUrl": "",
+        "deploymentUrl": ""
+    },
+    "sendfoodz": {
+        "image": "/src/assets/img/projects/sendfoodz.png",
+        "title": "SendFoodz",
+        "tech": ["Vue", "Vuex/Vuexfire", "Node", "Express", "Firebase", "Cloud Firestore", "NativeScript-vue", "Firebase Cloud Messaging", "REST API", "Figma", "ES6"],
+        "description": "An application to facilitate food donation to food banks",
+        "githubUrl": "https://github.com/CSC492-Send-Foodz",
+        "deploymentUrl": "https://csc492-send-foodz.github.io/login"
+    },
+    "snake": {
+        "image": "/src/assets/img/projects/snake_game.gif",
+        "title": "Snake",
+        "description": "A fun game of Snake",
+        "tech": ["Python3", "Pygame"],
+        "githubUrl": "https://github.com/NElnour/snake_game",
+        "deploymentUrl": ""
+    }
+}

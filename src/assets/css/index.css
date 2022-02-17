@@ -25,8 +25,8 @@ code {
     --light: 300;
     --bold: 700;
     --accent-dim: #fb8cbaa3;
-    ;
     /* --accent: #e2366a; */
     --accent: #fb8cbb;
+    --accent-dark: #ce4b82d6;
     --secondary-accent: #B3BEFB;
 }

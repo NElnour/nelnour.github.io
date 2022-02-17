@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:wght@300;400;700&display=swap');
 .Projects {
-    font-family: var(--montserrat);
-    font-size: var(--bold);
-    width: 100%;
+    width: 95vw;
     height: 100vh;
     margin-top: 95%;
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,11 +12,16 @@
 }
 
 .Project {
-    background-color: rgb(211, 104, 104);
-    width: 200px;
-    height: 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    gap: 20px;
 }
 
 #fade-up-right {
@@ -32,13 +34,67 @@
     margin-left: 50%;
 }
 
-.ProjectTitle {
-    color: white;
+.ProjectHead {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
 }
 
-:root {
-    --montserrat: 'Montserrat', sans-serif;
-    --regular: 400;
-    --light: 300;
-    --bold: 700;
+.ProjectTitle {
+    color: var(--color-bg);
+    font-family: var(--montserrat);
+}
+
+.ProjectImage {
+    padding-top: 5px;
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.ProjectLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 15px;
+}
+
+.github-link,
+.web-link {
+    color: var(--accent);
+    font-size: 1.3em;
+}
+
+.github-link:hover,
+.web-link:hover {
+    color: var(---accent-dark);
+}
+
+.inactive {
+    pointer-events: none;
+    color: rgb(148, 148, 148);
+    text-decoration: none;
+}
+
+.TechPill {
+    color: white;
+    background-color: var(--accent-dark);
+    border-radius: 30px;
+    padding: 8px;
+}
+
+.TechStack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    padding-bottom: 10px;
 }

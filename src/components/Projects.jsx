@@ -2,16 +2,19 @@ import React from 'react'
 import AOS from 'aos'
 import '@/assets/css/Projects.css'
 import 'aos/dist/aos.css';
+import * as ProjectsMap from '@/assets/jsons/p2p.json';
+import { FiGlobe, FiGithub } from 'react-icons/fi'
 
 export default class Projects extends React.Component {
     render() {
         return <section id='projects' className='Projects'>
-            <Project direction='right' />
-            <Project direction='left' />
-            <Project direction='right' />
-            <Project direction='left' />
-            <Project direction='right' />
-            <Project direction='left' />
+            <Project direction='left' projectName='fs' />
+            <Project direction='right' projectName='nhs' />
+            <Project direction='left' projectName='sendfoodz' />
+            <Project direction='right' projectName="snake" />
+            <Project direction='left' projectName='fortnite' />
+            <Project direction='right' projectName='bcb' />
+
         </section>
     }
 }
@@ -19,7 +22,10 @@ export default class Projects extends React.Component {
 class Project extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { direction: `fade-up-${this.props.direction}` }
+        this.state = {
+            direction: `fade-up-${this.props.direction}`,
+            projectName: this.props.projectName,
+        }
     }
     componentDidMount() {
         AOS.init({
@@ -28,21 +34,49 @@ class Project extends React.Component {
     }
 
     render() {
+        const project = ProjectsMap[this.state.projectName] || {}
+        const allTechs = project.tech
         return <div className='Project' data-aos={this.state.direction} id={this.state.direction}>
-            <ProjectImage />
-            <ProjectTitle />
+            <ProjectImage src={project.image} />
+            <ProjectTitle title={project.title} githubUrl={project.githubUrl} deploymentUrl={project.deploymentUrl
+            } />
+            <span className='TechStack'>
+                {
+                    allTechs.map(tech => (
+                        <ProjectTechPill tech={tech} />
+                    ))
+                }
+            </span>
         </div>
     }
 }
 
-function ProjectImage() {
-    return <img src='' alt='' aria-hidden='false' />
+function ProjectImage(props) {
+    return <img src={props.src} alt='' aria-hidden='false' className='ProjectImage' />
 }
 
-function ProjectTitle() {
-    return <h2>title</h2>
+class ProjectTitle extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            displayGithub: this.props.githubUrl !== '',
+            displayWeblink: this.props.deploymentUrl !== '',
+            githubUrl: this.props.githubUrl,
+            deploymentUrl: this.props.deploymentUrl,
+            title: this.props.title
+        }
+    }
+    render() {
+        return <span className='ProjectHead'>
+            <h2 className='ProjectTitle'>{this.state.title}</h2>
+            <span className='ProjectLinks'>
+                <a href={this.state.githubUrl} className={`github-link ${this.state.displayGithub ? '' : 'inactive'}`}><FiGithub /></a>
+                <a href={this.state.deploymentUrl} className='web-link'><FiGlobe /></a>
+            </span>
+        </span>
+    }
 }
 
-function ProjectDescription() {
-    return <p>project description</p>
+function ProjectTechPill(props) {
+    return <span className='TechPill'>{props.tech}</span>
 }
