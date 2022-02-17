@@ -1,9 +1,9 @@
 .Navbar {
     position: fixed;
     right: 0;
-    top: 0;
+    top: 1%;
+    bottom: 1%;
     padding-right: 2%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,11 +12,11 @@
     background-color: var(--color-bg);
 }
 
-.Navbar a {
+.NavLink {
     border: 1px solid var(--accent-dim);
     border-radius: 50%;
     width: 48px;
-    height: 5%;
+    aspect-ratio: 1/1;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -24,21 +24,18 @@
     color: var(--accent-dim);
     font-size: 2em;
     margin: auto;
+    transition: ease 0.8s;
 }
 
-.active {
-    color: var(--secondary-accent);
-    border-color: var(--secondary-accent);
-}
-
-.Navbar a * {
+.NavLink * {
     position: relative;
     width: 100%;
 }
 
-.Navbar a:hover {
+.NavLink:hover {
     color: var(--accent);
-    transition: ease 1s;
+    width: 90px;
+    font-size: 3em;
 }
 
 .VerticalDiv {

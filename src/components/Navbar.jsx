@@ -36,7 +36,7 @@ class NavLink extends React.Component {
     }
 
     render() {
-        return <a href={`#${this.props.icon}`} className={this.props.icon === 'home' ? 'active' : ''}>{
+        return <a href={`#${this.props.icon}`} className='NavLink'>{
                 this.state.icon}
         </a>
 
