@@ -43,7 +43,7 @@ class Project extends React.Component {
             <span className='TechStack'>
                 {
                     allTechs.map(tech => (
-                        <ProjectTechPill tech={tech} />
+                        <ProjectTechPill tech={tech} key={tech}/>
                     ))
                 }
             </span>

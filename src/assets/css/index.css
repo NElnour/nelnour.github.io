@@ -28,5 +28,6 @@ code {
     /* --accent: #e2366a; */
     --accent: #fb8cbb;
     --accent-dark: #ce4b82d6;
-    --secondary-accent: #B3BEFB;
+    --accent-secondary-dark: #6129fe;
+    --accent-secondary: #8a9af3;
 }

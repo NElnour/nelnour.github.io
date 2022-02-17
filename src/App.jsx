@@ -50,9 +50,7 @@ export default class App extends React.Component {
         <Trailer />
         <Projects />
         <Resume />
-        <footer>
-          <Contact />
-        </footer>
+        <Contact />
       </div>
     )
   }
