@@ -1,0 +1,28 @@
+.PreProjects {
+    position: relative;
+    padding: 10%;
+    background-color: white;
+}
+
+.PreProjects h2 {
+    font-size: 5em;
+    font-weight: 700;
+    background-image: linear-gradient(to right, #f758a7 0%, #b379f2 60%, #a25ced 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
+.LeadTrail {
+    position: absolute;
+    left: 0;
+    top: -20%;
+    width: 25%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.LeadTrail .svgPath {
+    stroke: #f758a7;
+}

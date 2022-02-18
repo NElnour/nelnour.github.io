@@ -13,7 +13,7 @@ export default class Trailer extends React.Component {
     render() {
         return <section className='IntroContainer'>
             <div className='Intro'>
-                <div className='Experience'>junior</div>
+                <div className='Experience'><strike>hatchling</strike> <span className='AngledText'>junior</span></div>
                 <div className='Position'>
                     web developer
                 </div>

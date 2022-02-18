@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:wght@300;400;700&display=swap');
 .Projects {
-    padding-top: 5%;
-    padding-bottom: 5%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -11,6 +9,7 @@
     align-content: center;
 
     background-color: #fff;
+    z-index: 7;
 }
 
 .Project {

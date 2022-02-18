@@ -7,9 +7,9 @@ import Contact from '@/components/Contact'
 import Resume from '@/components/Resume'
 import Intro from '@/components/Intro'
 import Mid from '@/components/Mid'
+import PreProjects from '@/components/PreProjects'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import '@/assets/css/App.css'
-import { render } from 'react-dom'
 
 export default class App extends React.Component {
   constructor() {
@@ -22,7 +22,6 @@ export default class App extends React.Component {
       window.addEventListener('scroll', (e) => {
         e.preventDefault
         let pos = window.pageYOffset * lagger.dataset.rate
-        console.log(lagger.getBoundingClientRect().top)
 
         if (lagger.dataset.direction === 'vertical') {
           lagger.style.transform = `translate3d(0px, ${pos}px, 0px)`
@@ -45,11 +44,12 @@ export default class App extends React.Component {
           <Header />
           <div className='ScrollDown'>
             <HiOutlineArrowNarrowDown onClick={(e) => {
-              document.querySelector('.Intro').scrollIntoView()
+              document.querySelector('.IntroContainer').scrollIntoView()
             }} />
           </div>
         </section>
         <Intro />
+        <PreProjects />
         <Projects />
         <Mid />
         <Resume />
