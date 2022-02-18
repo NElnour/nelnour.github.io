@@ -2,16 +2,20 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://nelnour.github.io/",
   "scripts": {
     "dev": "vite",
+    "predeploy": "npm run build",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@svgr/cli": "^6.2.1",
     "@svgr/core": "^6.2.1",
     "animejs": "^3.2.1",
     "aos": "^2.3.4",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
