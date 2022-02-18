@@ -33,6 +33,7 @@
 .ScrollDown svg:hover {
     cursor: pointer;
     height: 60px;
+    border-style: dotted;
 }
 
 @keyframes hover {

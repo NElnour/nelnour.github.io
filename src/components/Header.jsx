@@ -20,7 +20,6 @@ export default class Header extends React.Component {
     render() {
         return (
             <span className='Header'>
-                <div className='Name'>Nada Elnour</div>
                 <TypeWriter id='role'
                     data-rate='0.2'
                     data-direction='vertical'
@@ -32,9 +31,10 @@ export default class Header extends React.Component {
                         (typewriter) => {
                             typewriter
                                 .typeString(`<h1 id="hi">${this.state.mssg}</h1>`)
+                                .typeString(`<div className='Name'>I'm Nada</div>`)
                                 .start()
                         }
-                    } />
+                    } />          
             </span>
         )
     }

@@ -1,4 +1,5 @@
 .ContactContainer {
+   width: 100%;
     font-family: var(--montserrat);
     font-size: 1.2em;
     height: 6em;
@@ -12,13 +13,15 @@
 
 .ContactText {
     width: 100%;
+
+    padding-left: 7%;
     color: white;
 
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 10px;
     font-size: 1.2em;
 }

@@ -14,7 +14,8 @@
     padding-top: 20%;
     padding-bottom: 30%;
 
-    clip-path: inset(0px 0px 0px round 0% 50%);
+    /* clip-path: inset(0px 0px 0px round 0% 50%); */
+    border-bottom-left-radius: 50%;
     overflow: hidden;
 }
 
