@@ -40,7 +40,7 @@
 
 .AngledText {
     display: inline-block;
-    font-family: 'Architects Daughter', cursive;
+    font-family: var(--architect);
     position: relative;
     top: -40px;
     left: -40px;

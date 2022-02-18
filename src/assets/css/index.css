@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat:wght@300;400;700&family=Nunito:wght@300;400;700&display=swap');
+
 html {
     scroll-behavior: smooth;
     background-color: var(--color-bg);
@@ -19,7 +21,10 @@ code {
 }
 
 :root {
+    --architect: 'Architects Daughter', cursive;
     --montserrat: 'Montserrat', sans-serif;
+    --nunito: 'Nunito', sans-serif;
+
     --color-bg: #141414;
     --regular: 400;
     --light: 300;

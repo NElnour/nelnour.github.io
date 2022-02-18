@@ -19,19 +19,23 @@ export default class Header extends React.Component {
 
     render() {
         return (
-            <TypeWriter id='role'
-                data-rate='0.2'
-                data-direction='vertical'
-                className='scroll'
-                options={{
-                    delay: 100
-                }}
-                onInit={
-                    (typewriter) => {
-                        typewriter.typeString(`<h1 id="hi">${this.state.mssg}</h1>`)
-                            .start()
-                    }
-                } />
+            <span className='Header'>
+                <div className='Name'>Nada Elnour</div>
+                <TypeWriter id='role'
+                    data-rate='0.2'
+                    data-direction='vertical'
+                    className='scroll'
+                    options={{
+                        delay: 100
+                    }}
+                    onInit={
+                        (typewriter) => {
+                            typewriter
+                                .typeString(`<h1 id="hi">${this.state.mssg}</h1>`)
+                                .start()
+                        }
+                    } />
+            </span>
         )
     }
 }
