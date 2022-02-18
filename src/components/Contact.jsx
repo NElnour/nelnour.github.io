@@ -3,9 +3,10 @@ import heart from '@/assets/img/heart.gif'
 import coffee from '@/assets/img/coffee.gif'
 import '@/assets/css/Contact.css'
 
-import { FaGithubAlt } from "react-icons/fa";
-import { FiLinkedin } from "react-icons/fi";
-import { SiFrontendmentor } from "react-icons/si";
+import { FaGithubAlt } from "react-icons/fa"
+import { FiLinkedin } from "react-icons/fi"
+import { SiFrontendmentor } from "react-icons/si"
+import { HiOutlineDocumentText } from "react-icons/hi";
 
 function Contact() {
     return (
@@ -20,6 +21,7 @@ function Contact() {
                 <FindMe icon='github' />
                 <FindMe icon='linkedin' />
                 <FindMe icon='frontend' />
+                <FindMe icon='cv' />
             </div>
         </section>)
 
@@ -29,10 +31,12 @@ function FindMe(props) {
     const icons = {
         "github": <FaGithubAlt />,
         "linkedin": <FiLinkedin />,
-        "frontend": <SiFrontendmentor />
+        "frontend": <SiFrontendmentor />,
+        "cv": <HiOutlineDocumentText />
     }
     const url = contact[props.icon]
     return <a href={url} className='FindMe' target='_blank'>{icons[props.icon]}</a>
 }
+
 
 export default Contact

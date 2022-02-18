@@ -13,8 +13,6 @@ export default function Navbar() {
             <div className='VerticalDiv'></div>
             <NavLink icon="projects"></NavLink>
             <div className='VerticalDiv'></div>
-            <NavLink icon="cv"></NavLink>
-            <div className='VerticalDiv'></div>
             <NavLink icon="contact"></NavLink>
             <div className='VerticalDiv'></div>
         </div>

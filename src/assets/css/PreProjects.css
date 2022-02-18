@@ -5,13 +5,15 @@
 }
 
 .PreProjects h2 {
-    font-size: 5em;
+    font-family: var(--montserrat);
+    color: var(--color-bg);
+    font-size: 4em;
     font-weight: 700;
-    background-image: linear-gradient(to right, #f758a7 0%, #b379f2 60%, #a25ced 100%);
+    /* background-image: linear-gradient(to right, #f758a7 0%, #b379f2 60%, #a25ced 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
+    -moz-text-fill-color: transparent; */
 }
 
 .LeadTrail {

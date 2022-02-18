@@ -4,9 +4,7 @@ import Header from '@/components/Header'
 import Projects from '@/components/Projects'
 import Navbar from '@/components/Navbar'
 import Contact from '@/components/Contact'
-import Resume from '@/components/Resume'
 import Intro from '@/components/Intro'
-import Mid from '@/components/Mid'
 import PreProjects from '@/components/PreProjects'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import '@/assets/css/App.css'
@@ -51,8 +49,6 @@ export default class App extends React.Component {
         <Intro />
         <PreProjects />
         <Projects />
-        <Mid />
-        <Resume />
         <Contact />
       </div>
     )

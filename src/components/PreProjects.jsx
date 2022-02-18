@@ -24,7 +24,7 @@ export default class PreProjects extends React.Component {
                 <path className="svgPath" d="M3.31223 0.609362C3.31224 271 537 269 545.312 433.609" stroke="#141414" strokeWidth="5" />
             </svg>
 
-            <h2>and a few projects under my belt</h2>
+            <h2>with a few projects under my belt</h2>
         </div>
     }
 }
