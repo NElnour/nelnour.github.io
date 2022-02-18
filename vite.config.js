@@ -9,4 +9,7 @@ export default defineConfig({
     alias: [{ find: '@', replacement: path.resolve(__dirname, '/src') }]
   },
   plugins: [react()],
+  build: {
+    chunkSizeWarningLimit: 1600,
+  },
 })
