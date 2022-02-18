@@ -16,7 +16,7 @@
         "deploymentUrl": ""
     },
     "fs": {
-        "image": "/src/assets/face_splash1.png",
+        "image": "/src/assets/img/face_splash1.png",
         "title": "Face Splash",
         "tech": ["Vue", "Axios", "face-api.js"],
         "description": "Facial, sentiment, age, and sex detection analysis of Unsplash images built using Vue3,Unshplash API , and face-api.js",
@@ -24,7 +24,7 @@
         "deploymentUrl": "https://face-splash.herokuapp.com/"
     },
     "fortnite": {
-        "image": "/src/assets/homepage.png",
+        "image": "/src/assets/img/homepage.png",
         "title": "Fortnite 2-D MMOG",
         "tech": ["React", "HTML5", "CSS3", "jQuery", "Ajax", "Material UI", "REST API", "Fetch API", "Node", "Express", "SQLite3", "MVC"],
         "description": "A MMOG 2-D version of Fortnite. Class project; code withheld",
@@ -32,7 +32,7 @@
         "deploymentUrl": ""
     },
     "sendfoodz": {
-        "image": "/src/assets/sendfoodz.png",
+        "image": "/src/assets/img/sendfoodz.png",
         "title": "SendFoodz",
         "tech": ["Vue", "Vuex/Vuexfire", "Node", "Express", "Firebase", "Cloud Firestore", "NativeScript-vue", "Firebase Cloud Messaging", "REST API", "Figma", "ES6"],
         "description": "An application to facilitate food donation to food banks",
@@ -40,7 +40,7 @@
         "deploymentUrl": "https://csc492-send-foodz.github.io/login"
     },
     "snake": {
-        "image": "/src/assets/snake_game.gif",
+        "image": "/src/assets/img/snake_game.gif",
         "title": "Snake",
         "description": "A fun game of Snake",
         "tech": ["Python3", "Pygame"],
