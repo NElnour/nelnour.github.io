@@ -37,10 +37,9 @@
     align-content: center;
 }
 
-.ProjectTitle {
+.ProjectHead h3 {
     color: var(--color-bg);
     font-family: var(--montserrat);
-    font-weight: var(--bold);
 }
 
 .ProjectImage {
@@ -84,6 +83,8 @@
 }
 
 .TechStack {
+    font-family: var(--montserrat);
+    font-size: 1em;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

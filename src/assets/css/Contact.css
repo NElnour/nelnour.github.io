@@ -1,13 +1,13 @@
 .ContactContainer {
     font-family: var(--montserrat);
     font-size: 1.2em;
-    padding: 5%;
-
+    height: 6em;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+
+    border-top: 1px solid var(--disabled-dark);
 }
 
 .ContactText {
@@ -24,7 +24,7 @@
 
 .ContactText img {
     position: relative;
-    width: 2%;
+    width: 4%;
 }
 
 .Contact {
@@ -46,7 +46,7 @@
 
     text-decoration: none;
 
-    width: 70px;
+    width: 1.5em;
     aspect-ratio: 1/1;
     border-radius: 50%;
 

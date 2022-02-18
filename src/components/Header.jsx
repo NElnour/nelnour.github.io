@@ -12,20 +12,26 @@ export default class Header extends React.Component {
 
     componentDidMount() {
         let writer = document.querySelector('.Typewriter')
-        writer.setAttribute('class', 'Typewriter scroll')
+        writer.setAttribute('class', 'Typewriter Scroll')
         writer.setAttribute('data-rate', '0.4')
         writer.setAttribute('data-direction', 'vertical')
     }
 
     render() {
         return (
-            <TypeWriter id='role' data-rate='0.2' data-direction='vertical' className='scroll' onInit={
-                (typewriter) => {
-                    typewriter.typeString(`<h1 id="hi">${this.state.mssg}</h1>`)
-                        .changeDelay(1)
-                        .start()
-                }
-            } />
+            <TypeWriter id='role'
+                data-rate='0.2'
+                data-direction='vertical'
+                className='scroll'
+                options={{
+                    delay: 100
+                }}
+                onInit={
+                    (typewriter) => {
+                        typewriter.typeString(`<h1 id="hi">${this.state.mssg}</h1>`)
+                            .start()
+                    }
+                } />
         )
     }
 }

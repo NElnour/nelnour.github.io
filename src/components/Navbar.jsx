@@ -37,7 +37,7 @@ class NavLink extends React.Component {
 
     render() {
         return <a href={`#${this.props.icon}`} className='NavLink'>
-            <img src={this.state.icon} alt={this.props.icon} />
+            <img n-times='1.0' src={this.state.icon} alt={this.props.icon} />
         </a>
 
     }

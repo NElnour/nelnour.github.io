@@ -5,33 +5,35 @@ import Projects from '@/components/Projects'
 import Navbar from '@/components/Navbar'
 import Contact from '@/components/Contact'
 import Resume from '@/components/Resume'
-import Trailer from '@/components/Trailer'
+import Intro from '@/components/Intro'
+import Mid from '@/components/Mid'
 import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import '@/assets/css/App.css'
 import { render } from 'react-dom'
 
 export default class App extends React.Component {
-  // window.addEventListener('scroll', (event) => {
-  //   event.preventDefault
-  //   const laggers = document.querySelector('Header')
-  //   console.log(lagger)
-  // })
+  constructor() {
+    super()
+  }
 
   componentDidMount() {
-    const lagger = document.querySelector('.scroll')
-    window.addEventListener('scroll', (e) => {
-      e.preventDefault
-      let pos = window.pageYOffset * lagger.dataset.rate
+    const laggers = document.querySelectorAll('.Scroll')
+    laggers.forEach(lagger => {
+      window.addEventListener('scroll', (e) => {
+        e.preventDefault
+        let pos = window.pageYOffset * lagger.dataset.rate
+        console.log(lagger.getBoundingClientRect().top)
 
-      if (lagger.dataset.direction === 'vertical') {
-        lagger.style.transform = `translate3d(0px, ${pos}px, 0px)`
-      } else {
-        let posX = window.pageYOffset * lagger.dataset.ratex
-        let posY = window.pageYOffset * lagger.dataset.ratey
-        lagger.style.transform = `translate3(${posX}px, ${posY}px, 0px)`
+        if (lagger.dataset.direction === 'vertical') {
+          lagger.style.transform = `translate3d(0px, ${pos}px, 0px)`
+        } else {
+          let posX = window.pageYOffset * lagger.dataset.ratex
+          let posY = window.pageYOffset * lagger.dataset.ratey
+          lagger.style.transform = `translate3(${posX}px, ${posY}px, 0px)`
+        }
       }
-    }
-    )
+      )
+    })
   }
 
   render() {
@@ -42,13 +44,14 @@ export default class App extends React.Component {
           <Canvas />
           <Header />
           <div className='ScrollDown'>
-            <a href='#trailer'>
-              <HiOutlineArrowNarrowDown />
-            </a>
+            <HiOutlineArrowNarrowDown onClick={(e) => {
+              document.querySelector('.Intro').scrollIntoView()
+            }} />
           </div>
         </section>
-        <Trailer />
+        <Intro />
         <Projects />
+        <Mid />
         <Resume />
         <Contact />
       </div>

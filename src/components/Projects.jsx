@@ -68,7 +68,7 @@ class ProjectTitle extends React.Component {
     }
     render() {
         return <span className='ProjectHead'>
-            <h2 className='ProjectTitle'>{this.state.title}</h2>
+            <h3>{this.state.title}</h3>
             <span className='ProjectLinks'>
                 <a href={this.state.githubUrl} className={`github-link ${this.state.displayGithub ? '' : 'inactive'}`}><FiGithub /></a>
                 <a href={this.state.deploymentUrl} className={`web-link ${this.state.displayWeblink ? '' : 'inactive'}`}><FiGlobe /></a>

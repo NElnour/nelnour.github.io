@@ -1,6 +1,7 @@
 import React from 'react'
 import * as THREE from 'three'
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry'
+import anime from 'animejs/lib/anime.es.js';
 
 export default class Canvas extends React.Component {
 
@@ -22,7 +23,7 @@ export default class Canvas extends React.Component {
         renderer.setSize(window.innerWidth, window.innerHeight)
         document.getElementById('canvas').appendChild(renderer.domElement)
 
-        var box = new RoundedBoxGeometry(2, 2, 2, 7, 0.2);
+        var box = new RoundedBoxGeometry(4, 4, 4, 10, 1);
         var material = new THREE.MeshLambertMaterial({ color: 0xfb8cbb});
         var cube = new THREE.Mesh(box, material);
         scene.add(cube)
@@ -33,8 +34,8 @@ export default class Canvas extends React.Component {
 
         var animate = function () {
             requestAnimationFrame(animate)
-            cube.rotation.x = 0.0005 * mouseX
-            cube.rotation.y = 0.0005 * mouseY
+            cube.rotation.x = 0.0005 * mouseY
+            cube.rotation.y = 0.0005 * mouseX
             renderer.render(scene, camera)
         }
 
