@@ -23,7 +23,7 @@ class Project extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            direction: `fade-up-${this.props.direction}`,
+            direction: `zoom-in`,
             projectName: this.props.projectName,
         }
     }
@@ -36,7 +36,7 @@ class Project extends React.Component {
     render() {
         const project = ProjectsMap[this.state.projectName] || {}
         const allTechs = project.tech
-        return <div className='Project' data-aos={this.state.direction} id={this.state.direction}>
+        return <div className='Project' data-aos={this.state.direction}>
             <ProjectImage src={project.image} />
             <ProjectTitle title={project.title} githubUrl={project.githubUrl} deploymentUrl={project.deploymentUrl
             } />
@@ -71,7 +71,7 @@ class ProjectTitle extends React.Component {
             <h2 className='ProjectTitle'>{this.state.title}</h2>
             <span className='ProjectLinks'>
                 <a href={this.state.githubUrl} className={`github-link ${this.state.displayGithub ? '' : 'inactive'}`}><FiGithub /></a>
-                <a href={this.state.deploymentUrl} className='web-link'><FiGlobe /></a>
+                <a href={this.state.deploymentUrl} className={`web-link ${this.state.displayWeblink ? '' : 'inactive'}`}><FiGlobe /></a>
             </span>
         </span>
     }

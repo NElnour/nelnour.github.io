@@ -25,7 +25,7 @@
     },
     "fortnite": {
         "image": "/src/assets/img/projects/homepage.png",
-        "title": "fortnite 2-D MMOG",
+        "title": "Fortnite 2-D MMOG",
         "tech": ["React", "HTML5", "CSS3", "jQuery", "Ajax", "Material UI", "REST API", "Fetch API", "Node", "Express", "SQLite3", "MVC"],
         "description": "A MMOG 2-D version of Fortnite. Class project; code withheld",
         "githubUrl": "",

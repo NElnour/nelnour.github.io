@@ -20,14 +20,16 @@ code {
 
 :root {
     --montserrat: 'Montserrat', sans-serif;
-    --color-bg: #0a0a0a;
+    --color-bg: #141414;
     --regular: 400;
     --light: 300;
     --bold: 700;
     --accent-dim: #fb8cbaa3;
-    /* --accent: #e2366a; */
-    --accent: #fb8cbb;
+    --accent: #f49cc8;
     --accent-dark: #ce4b82d6;
-    --accent-secondary-dark: #6129fe;
-    --accent-secondary: #8a9af3;
+    --accent-secondary-dark: #9f4ef5;
+    --accent-secondary: #c69cf4;
+    --accent-secondary-dim: #c79cf4c6;
+    --disabled-color: #949494;
+    --disabled-dark: #505050;
 }

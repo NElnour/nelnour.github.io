@@ -1,8 +1,8 @@
 import React from 'react'
-import { BiHomeHeart } from "react-icons/bi";
-import { HiOutlineDocumentSearch } from "react-icons/hi";
-import { RiContactsLine } from "react-icons/ri";
-import { SiNounproject } from "react-icons/si";
+import projects from '@/assets/img/projects.gif'
+import home from '@/assets/img/home.gif'
+import resume from '@/assets/img/resume.gif'
+import contact from '@/assets/img/contact.gif'
 import '@/assets/css/Navbar.css'
 
 export default function Navbar() {
@@ -25,10 +25,10 @@ class NavLink extends React.Component {
     constructor(props) {
         super(props)
         const displayIcon = {
-            'home': <BiHomeHeart />,
-            'projects': <SiNounproject />,
-            'cv': <HiOutlineDocumentSearch />,
-            'contact': <RiContactsLine />
+            'home': home,
+            'projects': projects,
+            'cv': resume,
+            'contact': contact
         }
 
         this.state = { icon: displayIcon[this.props.icon] }
@@ -36,8 +36,8 @@ class NavLink extends React.Component {
     }
 
     render() {
-        return <a href={`#${this.props.icon}`} className='NavLink'>{
-                this.state.icon}
+        return <a href={`#${this.props.icon}`} className='NavLink'>
+            <img src={this.state.icon} alt={this.props.icon} />
         </a>
 
     }

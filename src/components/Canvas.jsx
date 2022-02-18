@@ -18,7 +18,7 @@ export default class Canvas extends React.Component {
             renderer.setSize(window.innerWidth, window.innerHeight)
         })
 
-        scene.background = new THREE.Color(0x0a0a0a) //
+        scene.background = new THREE.Color(0x141414) //
         renderer.setSize(window.innerWidth, window.innerHeight)
         document.getElementById('canvas').appendChild(renderer.domElement)
 
