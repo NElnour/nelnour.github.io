@@ -11,5 +11,6 @@ export default defineConfig({
   plugins: [react()],
   build: {
     chunkSizeWarningLimit: 1600,
+    assetsInlineLimit: '0',
   },
 })

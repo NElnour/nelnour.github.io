@@ -1,6 +1,7 @@
 import React from 'react'
 import * as THREE from 'three'
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry'
+import emoji from '@/assets/img/emoji.jpg'
 
 export default class Canvas extends React.Component {
 
@@ -30,7 +31,7 @@ export default class Canvas extends React.Component {
             new THREE.MeshStandardMaterial({ color: 0xf49cc8 }),
             new THREE.MeshStandardMaterial({ color: 0xf49cc8 }),
             new THREE.MeshStandardMaterial({ color: 0xf49cc8 }),
-            new THREE.MeshStandardMaterial({ map: textureLoader.load('/src/assets/textures/emoji.jpg') }),
+            new THREE.MeshStandardMaterial({ map: textureLoader.load(emoji) }),
             new THREE.MeshStandardMaterial({ color: 0xf49cc8 })
         ]
         var cube = new THREE.Mesh(box, material)

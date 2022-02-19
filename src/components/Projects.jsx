@@ -5,6 +5,13 @@ import 'aos/dist/aos.css';
 import * as ProjectsMap from '@/assets/jsons/p2p.json';
 import { FiGlobe, FiGithub } from 'react-icons/fi'
 
+import bcb from '@/assets/img/bcb420.png'
+import facesplash from '@/assets/img/facesplash.png'
+import nhs from '@/assets/img/nhs.png'
+import sendfoodz from '@/assets/img/sendfoodz.png'
+import snake from '@/assets/img/snake.gif'
+import fortnite from '@/assets/img/homepage.png'
+
 export default class Projects extends React.Component {
     render() {
         return <section id='projects' className='Projects'>
@@ -25,6 +32,14 @@ class Project extends React.Component {
         this.state = {
             direction: `zoom-in`,
             projectName: this.props.projectName,
+            ImageMap: {
+                "fs": facesplash,
+                "nhs": nhs,
+                "sendfoodz": sendfoodz,
+                "snake": snake,
+                "fortnite": fortnite,
+                "bcb": bcb
+            }
         }
     }
     componentDidMount() {
@@ -37,7 +52,7 @@ class Project extends React.Component {
         const project = ProjectsMap[this.state.projectName] || {}
         const allTechs = project.tech
         return <div className='Project' data-aos={this.state.direction}>
-            <ProjectImage src={project.image} />
+            <ProjectImage src={this.state.ImageMap[this.state.projectName]} />
             <ProjectTitle title={project.title} githubUrl={project.githubUrl} deploymentUrl={project.deploymentUrl
             } />
             <span className='TechStack'>
@@ -52,6 +67,7 @@ class Project extends React.Component {
 }
 
 function ProjectImage(props) {
+    console.log(props.src)
     return <img src={props.src} alt='' aria-hidden='false' className='ProjectImage' />
 }
 

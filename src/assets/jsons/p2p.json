@@ -16,7 +16,7 @@
         "deploymentUrl": ""
     },
     "fs": {
-        "image": "/src/assets/img/face_splash1.png",
+        "image": "/src/assets/img/facesplash.png",
         "title": "Face Splash",
         "tech": ["Vue", "Axios", "face-api.js"],
         "description": "Facial, sentiment, age, and sex detection analysis of Unsplash images built using Vue3,Unshplash API , and face-api.js",
@@ -40,7 +40,7 @@
         "deploymentUrl": "https://csc492-send-foodz.github.io/login"
     },
     "snake": {
-        "image": "/src/assets/img/snake_game.gif",
+        "image": "/src/assets/img/snake.gif",
         "title": "Snake",
         "description": "A fun game of Snake",
         "tech": ["Python3", "Pygame"],
