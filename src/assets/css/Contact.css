@@ -1,14 +1,15 @@
 .ContactContainer {
-   width: 100%;
+    width: 100%;
     font-family: var(--montserrat);
     font-size: 1.2em;
-    height: 6em;
+    letter-spacing: 1px;
+    line-height: 1em;
+    height: 10em;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-
-    border-top: 1px solid var(--disabled-dark);
+    border: none;
 }
 
 .ContactText {
@@ -45,12 +46,13 @@
 
 .FindMe {
     font-size: 1.2em;
-    color: var(--accent);
-    background-image: linear-gradient(to right, #43e2cf #8e9ffa);
+    color: white;
+    background-color: var(--accent-secondary);
 
     text-decoration: none;
 
-    width: 1.5em;
+    font-size: 1.5em;
+    width: 1.6em;
     aspect-ratio: 1/1;
     border-radius: 50%;
 
@@ -61,10 +63,7 @@
     align-content: center;
 
     transition: all ease 0.7s;
-}
-
-.FindMe:hover {
-    color: var(--accent-secondary);
-    font-size: 1.5em;
-    box-shadow: 0px 0px 10px 0px var(--accent-secondary);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.35),
+        inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }

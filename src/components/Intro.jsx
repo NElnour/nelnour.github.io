@@ -1,24 +1,19 @@
 import '@/assets/css/Intro.css'
 import 'aos/dist/aos.css';
-import AOS from 'aos'
 import React from 'react'
+import TypeWriter from 'typewriter-effect'
 
-export default class Trailer extends React.Component {
-    componentDidMount() {
-        AOS.init({
-            duration: 500
-        })
-    }
-
-    render() {
-        return <section className='IntroContainer'>
-            <div className='Intro'>
-                <div className='Experience'><strike>hatchling</strike> <span className='AngledText'>junior</span></div>
-                <div className='Position'>
-                    web developer
-                </div>
-                <div className='Scroll' data-rate='0.2' data-direction='vertical'>learning the ropes</div>
+export default function Trailer() {
+    return <section className='IntroContainer'>
+        <div className='Intro'>
+            <div className='Experience'>
+                junior
             </div>
-        </section>
-    }
+            <div className='Position'>
+                web developer
+            </div>
+            <div className='Scroll' data-rate='0.2' data-direction='vertical'>learning the ropes</div>
+        </div>
+    </section >
+
 }

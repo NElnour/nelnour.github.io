@@ -8,16 +8,9 @@ export default class Canvas extends React.Component {
     componentDidMount() {
         let mouseX, mouseY = 0
         var scene = new THREE.Scene()
-        var camera = new THREE.PerspectiveCamera(75, window.innerWidth * 0.95 / window.innerHeight, 0.1, 1000)
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000)
         camera.position.z = 5
         var renderer = new THREE.WebGL1Renderer()
-
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight
-            camera.updateProjectionMatrix()
-
-            renderer.setSize(window.innerWidth, window.innerHeight)
-        })
 
         scene.background = new THREE.Color(0x070707) //
         renderer.setSize(window.innerWidth, window.innerHeight)
@@ -44,22 +37,31 @@ export default class Canvas extends React.Component {
         const pointLightHelper = new THREE.PointLightHelper(pointLight, 4)
         scene.add(pointLight, pointLightHelper)
 
+
+        const raycaster = new THREE.Raycaster()
+        const pointer = new THREE.Vector2()
+
+        let animationTime = 1;
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight
+            camera.updateProjectionMatrix()
+
+            renderer.setSize(window.innerWidth, window.innerHeight)
+        })
+
+        window.addEventListener('mousemove', getPointer)
+        window.addEventListener('click', () => {
+            animationTime = 0
+            giggle()
+        })
+
         document.addEventListener('mousemove', pan)
 
         function pan(event) {
             mouseX = event.clientX - (window.innerWidth / 2)
             mouseY = event.clientY - (window.innerHeight / 2)
         }
-
-        const raycaster = new THREE.Raycaster()
-        const pointer = new THREE.Vector2()
-
-        let animationTime = 1;
-        window.addEventListener('mousemove', getPointer)
-        window.addEventListener('click', () => {
-            animationTime = 0
-            giggle()
-        })
 
         function getPointer(event) {
             pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
@@ -70,7 +72,7 @@ export default class Canvas extends React.Component {
             const timeDelta = 1 / 60; // 60 fps or bust!
 
             if (animationTime < 1.0) {
-                const animationSpeed = 0.6;
+                const animationSpeed = 0.5;
                 animationTime += timeDelta * animationSpeed;
             }
         }
@@ -90,6 +92,7 @@ export default class Canvas extends React.Component {
             })
             renderer.render(scene, camera);
         }
+        
 
         var animate = function () {
             raycaster.setFromCamera(pointer, camera)

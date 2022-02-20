@@ -3,7 +3,6 @@ import AOS from 'aos'
 import '@/assets/css/Projects.css'
 import 'aos/dist/aos.css';
 import * as ProjectsMap from '@/assets/jsons/p2p.json';
-import { FiGlobe, FiGithub } from 'react-icons/fi'
 
 import bcb from '@/assets/img/bcb420.png'
 import facesplash from '@/assets/img/facesplash.png'
@@ -30,7 +29,7 @@ class Project extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            direction: `zoom-in`,
+            direction: `fade-up`,
             projectName: this.props.projectName,
             ImageMap: {
                 "fs": facesplash,
@@ -44,7 +43,7 @@ class Project extends React.Component {
     }
     componentDidMount() {
         AOS.init({
-            duration: 1000
+            duration: 700
         })
     }
 
@@ -67,7 +66,6 @@ class Project extends React.Component {
 }
 
 function ProjectImage(props) {
-    console.log(props.src)
     return <img src={props.src} alt='' aria-hidden='false' className='ProjectImage' />
 }
 
@@ -86,8 +84,8 @@ class ProjectTitle extends React.Component {
         return <span className='ProjectHead'>
             <h3>{this.state.title}</h3>
             <span className='ProjectLinks'>
-                <a href={this.state.githubUrl} className={`github-link ${this.state.displayGithub ? '' : 'inactive'}`}><FiGithub /></a>
-                <a href={this.state.deploymentUrl} className={`web-link ${this.state.displayWeblink ? '' : 'inactive'}`}><FiGlobe /></a>
+                <a href={this.state.githubUrl} target='_blank' className={`github-link ${this.state.displayGithub ? '' : 'inactive'}`}><ion-icon name="logo-github"></ion-icon></a>
+                <a href={this.state.deploymentUrl} target='_blank' className={`web-link ${this.state.displayWeblink ? '' : 'inactive'}`}><ion-icon name="globe"></ion-icon></a>
             </span>
         </span>
     }

@@ -1,30 +1,59 @@
+.PreProjectContainer {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .PreProjects {
+    width: 100%;
+    font-family: var(--montserrat);
+    font-size: 2em;
+    letter-spacing: 1px;
     position: relative;
-    padding: 10%;
-    background-color: white;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    background-color: #fff;
+    color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .PreProjects h2 {
-    font-family: var(--montserrat);
-    color: var(--color-bg);
-    font-size: 4em;
+    font-family: var(--nunito);
+    position: relative;
+    color: transparent;
     font-weight: 700;
-    /* background-image: linear-gradient(to right, #f758a7 0%, #b379f2 60%, #a25ced 100%);
+    font-size: 3em;
+    -webkit-text-stroke: 3px rgba(51, 51, 51, 0.5);
+}
+
+.PreProjects h2::before {
+    color: #fff;
+    content: attr(data-text);
+    position: absolute;
+    background-image: linear-gradient(to right, #f758a7 0%, #b379f2 60%, #a25ced 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
-    -moz-text-fill-color: transparent; */
-}
-
-.LeadTrail {
-    position: absolute;
-    left: 0;
-    top: -20%;
-    width: 25%;
+    -moz-text-fill-color: transparent;
+    width: 0;
     overflow: hidden;
-    display: inline-block;
+    transition: ease-in-out 1s;
 }
 
-.LeadTrail .svgPath {
-    stroke: #f758a7;
+.PreProjects h2:hover::before {
+    width: 100%;
+    -webkit-text-stroke: 0px #a25ced;
+    filter: drop-shadow(0 0 25px #a25ced);
+}
+
+.SideLine {
+    position: absolute;
+    background-color: #f758a7;
+    width: 5px;
+    height: 0px;
 }

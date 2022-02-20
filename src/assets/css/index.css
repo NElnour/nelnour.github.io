@@ -29,12 +29,17 @@ code {
     --regular: 400;
     --light: 300;
     --bold: 700;
-    --accent-dim: #fb8cbaa3;
+    --accent-dim: #f49cc89e;
     --accent: #f49cc8;
-    --accent-dark: #ce4b82d6;
-    --accent-secondary-dark: #9f4ef5;
-    --accent-secondary: #c69cf4;
-    --accent-secondary-dim: #c79cf4c6;
+    /* --accent-dark: #ff2c74; */
+    /* --accent-dark: #ed3a93; */
+    --accent-dark: #e8609d;
+    --accent-secondary-dark: #7960e8b6;
+    --accent-secondary: #7960e8;
+    --accent-secondary-dim: #7960e8de;
     --disabled-color: #949494;
-    --disabled-dark: #505050;
+    /* --clay-grey: #2f363e; */
+    --disabled-dark: #575d63;
+    --clay-grey: #171a1f;
+    --color-bg-alt: #090a18;
 }

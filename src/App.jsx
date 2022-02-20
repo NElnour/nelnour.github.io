@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react'
+import React from 'react'
 import Canvas from '@/components/Canvas'
 import Header from '@/components/Header'
 import Projects from '@/components/Projects'
@@ -6,7 +6,6 @@ import Navbar from '@/components/Navbar'
 import Contact from '@/components/Contact'
 import Intro from '@/components/Intro'
 import PreProjects from '@/components/PreProjects'
-import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
 import '@/assets/css/App.css'
 
 export default class App extends React.Component {
@@ -38,13 +37,8 @@ export default class App extends React.Component {
       <div className="App">
         <Navbar />
         <section className='Hero' id='home'>
-          <Canvas />
           <Header />
-          <div className='ScrollDown'>
-            <HiOutlineArrowNarrowDown onClick={(e) => {
-              document.querySelector('.IntroContainer').scrollIntoView()
-            }} />
-          </div>
+          <Canvas />
         </section>
         <Intro />
         <PreProjects />
