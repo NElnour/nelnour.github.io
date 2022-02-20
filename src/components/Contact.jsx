@@ -2,6 +2,7 @@ import contact from '@/assets/jsons/contact.json'
 import heart from '@/assets/img/heart.gif'
 import coffee from '@/assets/img/coffee.gif'
 import '@/assets/css/Contact.css'
+import cv from '@/assets/NadaElnour_resume.pdf?url'
 
 import { FaGithubAlt } from "react-icons/fa"
 import { FiLinkedin } from "react-icons/fi"
@@ -34,7 +35,13 @@ function FindMe(props) {
         "frontend": <SiFrontendmentor />,
         "cv": <HiOutlineDocumentText />
     }
-    const url = contact[props.icon]
+    var url
+    if (props.icon == 'cv') {
+        url = cv
+    } else {
+        url = contact[props.icon]
+    }
+
     return <a href={url} className='FindMe' target='_blank'>{icons[props.icon]}</a>
 }
 
