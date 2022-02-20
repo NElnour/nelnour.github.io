@@ -9,6 +9,7 @@
     align-items: center;
     z-index: 10;
     background-color: var(--color-bg);
+    border-bottom-left-radius: 60px;
 }
 
 .Name {
