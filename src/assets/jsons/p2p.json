@@ -5,7 +5,7 @@
         "tech": ["HTML5", "CSS3", "Bootstrap"],
         "description": "Website designed and deployed",
         "githubUrl": "https://github.com/nhsproperties/nhsproperties.github.io",
-        "deploymentUrl": "https://nhsproperties.github.io"
+        "deploymentUrl": "https://zen-stonebraker-c4aa00.netlify.app/"
     },
     "fs": {
         "image": "/src/assets/img/facesplash.png",
