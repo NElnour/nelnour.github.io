@@ -4,23 +4,22 @@ import '@/assets/css/Projects.css'
 import 'aos/dist/aos.css';
 import * as ProjectsMap from '@/assets/jsons/p2p.json';
 
-import bcb from '@/assets/img/bcb420.png'
 import facesplash from '@/assets/img/facesplash.png'
 import nhs from '@/assets/img/nhs.png'
 import sendfoodz from '@/assets/img/sendfoodz.png'
 import snake from '@/assets/img/snake.gif'
 import fortnite from '@/assets/img/homepage.png'
+import musicplayer from '@/assets/img/music-player.png'
 
 export default class Projects extends React.Component {
     render() {
         return <section id='projects' className='Projects'>
+            <Project direction='right' projectName='mp' />
             <Project direction='left' projectName='fs' />
             <Project direction='right' projectName='nhs' />
             <Project direction='left' projectName='sendfoodz' />
             <Project direction='right' projectName="snake" />
             <Project direction='left' projectName='fortnite' />
-            <Project direction='right' projectName='bcb' />
-
         </section>
     }
 }
@@ -37,7 +36,7 @@ class Project extends React.Component {
                 "sendfoodz": sendfoodz,
                 "snake": snake,
                 "fortnite": fortnite,
-                "bcb": bcb
+                "mp": musicplayer
             }
         }
     }
@@ -57,7 +56,7 @@ class Project extends React.Component {
             <span className='TechStack'>
                 {
                     allTechs.map(tech => (
-                        <ProjectTechPill tech={tech} key={tech}/>
+                        <ProjectTechPill tech={tech} key={tech} />
                     ))
                 }
             </span>
