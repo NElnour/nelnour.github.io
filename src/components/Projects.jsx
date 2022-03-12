@@ -14,7 +14,6 @@ import musicplayer from '@/assets/img/music-player.png'
 export default class Projects extends React.Component {
     render() {
         return <section id='projects' className='Projects'>
-            <Project direction='right' projectName='mp' />
             <Project direction='left' projectName='fs' />
             <Project direction='right' projectName='nhs' />
             <Project direction='left' projectName='sendfoodz' />
@@ -36,7 +35,6 @@ class Project extends React.Component {
                 "sendfoodz": sendfoodz,
                 "snake": snake,
                 "fortnite": fortnite,
-                "mp": musicplayer
             }
         }
     }
